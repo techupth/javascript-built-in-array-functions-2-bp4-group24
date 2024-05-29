@@ -373,4 +373,14 @@ const bills = [
   },
 ];
 
-// Start coding here
+function sumBill(sum,bill){
+  return sum+bill.total;
+};
+
+let totalBill = bills.reduce(sumBill,0);
+console.log(`Total bill transaction is ${totalBill}`);
+
+
+
+
+
