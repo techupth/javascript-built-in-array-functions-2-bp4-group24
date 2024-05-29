@@ -1,6 +1,12 @@
 function isPalindrome(string) {
-  // Start coding here
+  let reverseString = string.split('').reverse().join('');
+  if (reverseString === string){
+      return true;
+  }else {
+      return false;
+  }
 }
+
 
 //Example case
 console.log(isPalindrome("reviver"));// true

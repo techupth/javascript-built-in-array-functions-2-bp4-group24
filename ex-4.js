@@ -373,5 +373,41 @@ const bills = [
   },
 ];
 
-// Start coding here
-const totalMembers;
+function filterMember(bill){
+  if(bill.member != null){
+      return bill;
+  }
+}
+
+function getCustomerName(bill){
+  return bill.member.name;
+}
+
+let customerNames = bills.filter(filterMember).map(getCustomerName);
+console.log(customerNames);
+
+//Exercise 04//
+
+function countMember(name){
+  let unique =[];
+  for (let i=0;i<name.length;i++){
+      let nameLower = name[i].toLowerCase();
+      if (!unique.includes(nameLower)){
+          unique.push(nameLower);
+      }
+  }
+
+  return unique.length;
+}
+
+let members = countMember(customerNames);
+console.log(`Unique Members Count: ${members}`);
+
+
+
+
+
+
+
+
+
